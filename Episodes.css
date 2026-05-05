@@ -1,0 +1,85 @@
+.episodes-page { max-width: 900px; margin: 0 auto; }
+
+.episodes-intro {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.ep-list { display: flex; flex-direction: column; gap: 2.5rem; }
+
+.ep-row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1.5rem;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.ep-row:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 30px var(--shadow);
+  transform: translateY(-3px);
+}
+
+.ep-num-badge {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: var(--primary);
+  line-height: 1;
+  padding-top: 0.2rem;
+  text-align: center;
+}
+
+.ep-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.4rem;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.ep-season {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ep-video-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 1rem 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  border: 2px solid var(--border);
+}
+
+.ep-video-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.ep-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  border-top: 1px solid var(--border);
+  padding-top: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .ep-row { grid-template-columns: 1fr; }
+  .ep-num-badge { font-size: 1.2rem; text-align: left; }
+}

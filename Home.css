@@ -1,0 +1,217 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem;
+}
+
+.hero-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.hero-img-wrap {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 380px;
+  animation: floatY 4s ease-in-out infinite;
+  filter: drop-shadow(0 12px 30px rgba(255,193,7,0.3));
+}
+
+.hero-homer {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 130px;
+  animation: wiggle 4s ease-in-out infinite;
+}
+
+/* ── ABOUT ── */
+.about-section { padding-top: 3rem; padding-bottom: 3rem; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.about-img-stack { position: relative; height: 320px; }
+
+.about-img {
+  width: 75%;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px var(--shadow);
+  position: absolute;
+  border: 3px solid var(--primary);
+}
+
+.about-img.top  { top: 0; left: 0; }
+.about-img.bot  { bottom: 0; right: 0; }
+
+/* ── WHAT WE DO ── */
+.what-we-do {
+  background: var(--bg2);
+  padding: 3rem 0;
+  margin: 2rem 0;
+}
+
+.wwd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.wwd-card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wwd-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px var(--shadow);
+  border-color: var(--primary);
+}
+
+.wwd-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.5rem;
+  color: #1A1A2E;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.wwd-card h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 0.6rem;
+}
+
+.wwd-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; }
+
+/* ── CHARACTERS ── */
+.chars-section { padding: 3rem 1.5rem; }
+
+.chars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 1.5rem;
+}
+
+.char-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  padding: 1.5rem 1rem 1rem;
+  text-align: center;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.char-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px var(--shadow);
+}
+
+.char-img {
+  width: 90px;
+  height: 110px;
+  object-fit: contain;
+  margin: 0 auto 0.8rem;
+  transition: transform 0.3s;
+}
+
+.char-card:hover .char-img { transform: scale(1.08); }
+
+.char-card h4 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+
+.char-card p { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+
+/* ── BANNER ── */
+.banner-section {
+  position: relative;
+  margin: 2rem 0 0;
+  overflow: hidden;
+  max-height: 340px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  object-position: top;
+  filter: brightness(0.45);
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.banner-overlay h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; text-align: center; padding: 2rem 1rem; }
+  .hero-btns { justify-content: center; }
+  .hero-homer { display: none; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-img-stack { height: 220px; }
+}
